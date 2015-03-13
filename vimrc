@@ -1,4 +1,4 @@
-”This is Vim, not Vi
+"This is Vim, not Vi
 set nocompatible
 
 "LAYNE’S SETTINGS
@@ -45,7 +45,7 @@ call vundle#begin()
 
 "manage vundle with vundle
 Plugin 'gmarik/Vundle.vim'
-
+Plugin 'mtscout6/vim-cjsx'
 "Shows the git diff status in the 'gutter' column
 Plugin 'airblade/vim-gitgutter'
 "The solarized color scheme
