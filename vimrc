@@ -45,17 +45,18 @@ call vundle#begin()
 
 "manage vundle with vundle
 Plugin 'gmarik/Vundle.vim'
-Plugin 'mtscout6/vim-cjsx'
+"Makes json easier to read
+Plugin 'elzr/vim-json'
+"JSX syntax
+Plugin 'mxw/vim-jsx'
+"ES6 syntax
+Plugin 'isRuslan/vim-es6'
 "Shows the git diff status in the 'gutter' column
 Plugin 'airblade/vim-gitgutter'
 "The solarized color scheme
 Plugin 'altercation/vim-colors-solarized'
 "Airline, a light version of Powerline, a status line on steriods
 Plugin 'bling/vim-airline'
-"TOML Syntax, used by Rust's Cargo
-Plugin 'cespare/vim-toml'
-"Mirror of the official golang vim bundle
-Plugin 'jnwhiteh/vim-golang'
 "Coffee Script  syntax, indenting, compiling, and more.
 Plugin 'kchmck/vim-coffee-script'
 "Ctrl-P, a fuzzy finder for vim
@@ -64,10 +65,6 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'mileszs/ack.vim'
 "Adds the Jellybeans color scheme
 Plugin 'nanotech/jellybeans.vim'
-"Sytnax etc for Handlebars templates
-Plugin 'nono/vim-handlebars'
-"Bats file highlighting
-Plugin 'rosstimson/bats.vim'
 "Visualize your undo tree (:GundoToggle)
 Plugin 'sjl/gundo.vim'
 "comment stuff out like a pro
@@ -96,14 +93,14 @@ Plugin 'tpope/vim-surround'
 Plugin 'vim-ruby/vim-ruby'
 "Awesome buffer explorer
 Plugin 'vim-scripts/bufexplorer.zip'
-"Noone likes you delimitMate! (automatically adds closing parens and such)
-"Plugin 'vim-scripts/delimitMate.vim'
+"Automatically adds closing parens and such
+Plugin 'vim-scripts/delimitMate.vim'
 "shows 'Nth match out of M'
 Plugin 'vim-scripts/IndexedSearch'
 "Extends % to do the right thing in HTML & LaTeX among others
 Plugin 'vim-scripts/matchit.zip'
-"Rust syntax & indent settings
-Plugin 'wting/rust.vim'
+"Color scheme manager
+Plugin 'flazz/vim-colorschemes'
 
 " All plugins specified
 call vundle#end()
@@ -188,12 +185,18 @@ let g:ctrlp_cmd = 'CtrlPMixed'
 "syntastic settings
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=2
+let g:syntastic_check_on_open = 1
+"support for es6
+let g:syntastic_javascript_checkers = ['eslint']
 
 "nerdtree settings
 let g:NERDTreeMouseMode = 2
 let g:NERDTreeWinSize = 40
 let g:NERDTreeIgnore=['\.DS_Store$', '\.vim$', '\.rbc$', '\~$']
 let g:NERDTreeMapOpenSplit = 'i'
+
+"Allow JSX in normal JS files
+let g:jsx_ext_required = 0
 
 "map Q to something useful
 noremap Q gq
@@ -272,7 +275,7 @@ let mapleader = ","
 set nowrap
 
 "Map capital W to lower case w because fast fingers
-command W w
+command! W w
 
 "get rid of all that wailing trightspace.
 map  <Leader>wt      :%s/\v\s+$//<CR>
@@ -303,3 +306,4 @@ augroup reload_vimrc " {
     autocmd!
     autocmd BufWritePost $MYVIMRC source $MYVIMRC
 augroup END " }
+
