@@ -1,0 +1,12 @@
+--color
+--sort-files
+--smart-case
+
+--type-add=ruby=.haml,.rake,.ru
+--type-add=js=.hbs,.coffee
+--type-add=css=.scss,.less,.sass
+
+--ignore-dir=log
+--ignore-dir=tmp
+--ignore-dir=vendor
+--ignore-dir=.idea
