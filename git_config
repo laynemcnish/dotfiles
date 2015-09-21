@@ -1,0 +1,26 @@
+[core]
+	excludesfile = /Users/#{INSERT_USER_HERE}/.gitignore_global
+	editor = mvim -f
+[user]
+	name = INSERT_NAME_HERE
+	email = INSERT_EMAIL_ADDRESS_HERE
+[push]
+	default = matching
+
+[color]
+    branch = auto
+    diff = auto
+    status = auto
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+[color "status"]
+    added = yellow
+    changed = green
+    untracked = cyan
