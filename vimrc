@@ -180,7 +180,9 @@ let g:airline_theme='jellybeans'
 
 "ctrlp settings
 let g:ctrlp_map = '<Leader>p'
-let g:ctrlp_cmd = 'CtrlPMixed'
+"only search in starting directory
+"if you want to search in files, buffers and mru, use 'CtrlPMixed'
+let g:ctrlp_cmd = 'CtrlP'
 
 "syntastic settings
 let g:syntastic_enable_signs=1
