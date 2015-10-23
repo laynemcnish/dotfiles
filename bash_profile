@@ -1,4 +1,5 @@
 alias be='bundle exec'
+alias hack="git checkout master && git fetch && git pull && git checkout - && git rebase master $@"
 
 function renametab () {
     echo -ne "\033]0;"$@"\007"
