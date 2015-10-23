@@ -4,7 +4,7 @@ set nocompatible
 "LAYNE’S SETTINGS
 "******************************************************************
 
-"Map ack to <leader>a
+"map ack to <leader>a
 nnoremap <leader>a :Ack
 
 "Remove temptation to use arrow keys
@@ -27,6 +27,9 @@ au FocusLost * :wa
 
 "Replace : with ;
 nnoremap ; :
+
+"Save line to clipboard
+nnoremap cc “+y
 
 "Reselect previously selected text to perform action
 nnoremap <leader>v V`]
@@ -180,8 +183,6 @@ let g:airline_theme='jellybeans'
 
 "ctrlp settings
 let g:ctrlp_map = '<Leader>p'
-"only search in starting directory
-"if you want to search in files, buffers and mru, use 'CtrlPMixed'
 let g:ctrlp_cmd = 'CtrlP'
 
 "syntastic settings
@@ -308,4 +309,3 @@ augroup reload_vimrc " {
     autocmd!
     autocmd BufWritePost $MYVIMRC source $MYVIMRC
 augroup END " }
-
