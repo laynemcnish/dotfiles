@@ -5,7 +5,7 @@ function renametab () {
     echo -ne "\033]0;"$@"\007"
 }
 
-if [ -f ~/.git-completion.bash ]; then . ~/.git-completion.bash; fi
+if [ -f ~/dotfiles/git-completion.bash ]; then . ~/dotfiles/git-completion.bash; fi
 
 parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
