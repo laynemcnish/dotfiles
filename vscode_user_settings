@@ -1,0 +1,25 @@
+{
+    "workbench.colorTheme": "fairyfloss",
+    "files.autoSave": "onFocusChange",
+    "workbench.statusBar.feedback.visible": false,
+    "gitlens.advanced.messages": {
+        "suppressCommitHasNoPreviousCommitWarning": false,
+        "suppressCommitNotFoundWarning": false,
+        "suppressFileNotUnderSourceControlWarning": false,
+        "suppressGitVersionWarning": false,
+        "suppressLineUncommittedWarning": false,
+        "suppressNoRepositoryWarning": false,
+        "suppressResultsExplorerNotice": false,
+        "suppressShowKeyBindingsNotice": true
+    },
+    "extensions.ignoreRecommendations": false,
+    "gitlens.historyExplorer.enabled": true,
+    "markdownTableFormatter.enable": true,
+    "window.zoomLevel": 1,
+    "[markdown]": {
+        "editor.wordWrap": "off",
+    },
+    "editor.fontFamily": "'Fira Code'",
+    "editor.fontSize": 14,
+    "editor.fontLigatures": true
+}
